@@ -183,4 +183,112 @@ class ReviewViewModelTest {
         assertThat(state.extractedData?.detectedAmount).isEqualTo(650.0)
         assertThat(state.extractedData?.suggestedCategory?.categoryId).isEqualTo("food")
     }
+
+    @Test
+    fun toggleSelectAll_selectsAndDeselectsAllItems() = runTest {
+        backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) {
+            viewModel.uiState.collect()
+        }
+
+        val id1 = repository.insertUnparsedSms(
+            UnparsedSmsEntity(smsId = 1, sender = "bKash", body = "Msg 1", timestamp = 1000L, reason = "Unparsed")
+        )
+        val id2 = repository.insertUnparsedSms(
+            UnparsedSmsEntity(smsId = 2, sender = "Nagad", body = "Msg 2", timestamp = 2000L, reason = "Unparsed")
+        )
+        testDispatcher.scheduler.advanceUntilIdle()
+
+        assertThat(viewModel.uiState.value.pendingList).hasSize(2)
+        assertThat(viewModel.uiState.value.selectedIds).isEmpty()
+        assertThat(viewModel.uiState.value.isAllSelected).isFalse()
+
+        // Select All
+        viewModel.toggleSelectAll()
+        testDispatcher.scheduler.advanceUntilIdle()
+        assertThat(viewModel.uiState.value.selectedIds).containsExactly(id1, id2)
+        assertThat(viewModel.uiState.value.isAllSelected).isTrue()
+        assertThat(viewModel.uiState.value.selectedCount).isEqualTo(2)
+
+        // Deselect All
+        viewModel.toggleSelectAll()
+        testDispatcher.scheduler.advanceUntilIdle()
+        assertThat(viewModel.uiState.value.selectedIds).isEmpty()
+        assertThat(viewModel.uiState.value.isAllSelected).isFalse()
+    }
+
+    @Test
+    fun toggleSelection_selectsIndividualItem() = runTest {
+        backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) {
+            viewModel.uiState.collect()
+        }
+
+        val id1 = repository.insertUnparsedSms(
+            UnparsedSmsEntity(smsId = 1, sender = "bKash", body = "Msg 1", timestamp = 1000L, reason = "Unparsed")
+        )
+        testDispatcher.scheduler.advanceUntilIdle()
+
+        viewModel.toggleSelection(id1)
+        testDispatcher.scheduler.advanceUntilIdle()
+        assertThat(viewModel.uiState.value.selectedIds).containsExactly(id1)
+
+        viewModel.toggleSelection(id1)
+        testDispatcher.scheduler.advanceUntilIdle()
+        assertThat(viewModel.uiState.value.selectedIds).isEmpty()
+    }
+
+    @Test
+    fun onIgnoreSelected_dismissesAllSelectedItems() = runTest {
+        backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) {
+            viewModel.uiState.collect()
+        }
+
+        val id1 = repository.insertUnparsedSms(
+            UnparsedSmsEntity(smsId = 1, sender = "bKash", body = "Msg 1", timestamp = 1000L, reason = "Unparsed")
+        )
+        val id2 = repository.insertUnparsedSms(
+            UnparsedSmsEntity(smsId = 2, sender = "Nagad", body = "Msg 2", timestamp = 2000L, reason = "Unparsed")
+        )
+        testDispatcher.scheduler.advanceUntilIdle()
+
+        viewModel.toggleSelection(id1)
+        viewModel.toggleSelection(id2)
+
+        viewModel.onIgnoreSelected()
+        testDispatcher.scheduler.advanceUntilIdle()
+
+        assertThat(viewModel.uiState.value.pendingList).isEmpty()
+        assertThat(viewModel.uiState.value.selectedIds).isEmpty()
+    }
+
+    @Test
+    fun onAutoConvertSelected_convertsSelectedToTransactions() = runTest {
+        backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) {
+            viewModel.uiState.collect()
+        }
+
+        val id1 = repository.insertUnparsedSms(
+            UnparsedSmsEntity(
+                smsId = 1,
+                sender = "bKash",
+                body = "Payment of Tk 750 to Pizza Guy successful",
+                timestamp = 1000L,
+                reason = "Unparsed"
+            )
+        )
+        testDispatcher.scheduler.advanceUntilIdle()
+
+        viewModel.toggleSelection(id1)
+        viewModel.onAutoConvertSelected()
+        testDispatcher.scheduler.advanceUntilIdle()
+
+        // Unparsed should be removed
+        assertThat(viewModel.uiState.value.pendingList).isEmpty()
+        assertThat(viewModel.uiState.value.selectedIds).isEmpty()
+
+        // Transaction should be inserted
+        val txs = repository.transactionsFlow.value
+        assertThat(txs).hasSize(1)
+        assertThat(txs[0].amount).isEqualTo(750.0)
+        assertThat(txs[0].category).isEqualTo("food")
+    }
 }

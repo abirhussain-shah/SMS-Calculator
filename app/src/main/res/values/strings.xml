@@ -236,4 +236,11 @@
     <string name="rules_search_hint">Search merchant rules…</string>
     <string name="settings_category_rules">Merchant Rules</string>
     <string name="settings_category_rules_desc">View and manage auto-categorization rules</string>
+
+    <!-- Review Batch Selection -->
+    <string name="review_select_all">Select All</string>
+    <string name="review_selected_count">%1$d of %2$d selected</string>
+    <string name="review_selected_badge">%1$d Selected</string>
+    <string name="review_ignore_selected">Ignore Selected</string>
+    <string name="review_auto_convert_all">Auto-Convert All</string>
 </resources>
