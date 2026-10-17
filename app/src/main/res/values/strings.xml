@@ -1,0 +1,239 @@
+<resources>
+    <string name="app_name">SpendSMS</string>
+    <string name="currency_symbol">৳</string>
+    <string name="currency_bdt">BDT</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_transactions">Transactions</string>
+    <string name="nav_review">Review</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Onboarding & Permissions -->
+    <string name="onboarding_title">Smart &amp; Private Expense Tracking</string>
+    <string name="onboarding_subtitle">SpendSMS automatically detects your bank and mobile financial transactions (bKash, Nagad, Rocket, Cards) right from your SMS inbox.</string>
+    <string name="onboarding_feature_offline_title">100% Offline &amp; Secure</string>
+    <string name="onboarding_feature_offline_desc">Zero internet permissions. Your financial messages never leave your phone.</string>
+    <string name="onboarding_feature_auto_title">Automated Expense Categorization</string>
+    <string name="onboarding_feature_auto_desc">Real-time alerts, spending breakdowns, and smart merchant tracking.</string>
+    <string name="permission_title">SMS Access Required</string>
+    <string name="permission_rationale">SpendSMS needs SMS permissions to read your transaction alerts from financial institutions and keep your expense log updated automatically.</string>
+    <string name="permission_btn_grant">Grant Permissions</string>
+    <string name="permission_btn_settings">Open App Settings</string>
+    <string name="permission_denied_message">SMS permission is required to analyze transaction alerts. Please enable it in Settings.</string>
+
+    <!-- Home Screen -->
+    <string name="home_title">SpendSMS</string>
+    <string name="home_this_month">This Month</string>
+    <string name="home_total_spent">Total Spent</string>
+    <string name="home_total_received">Total Received</string>
+    <string name="home_net_balance">Net Balance</string>
+    <string name="home_category_breakdown">Spending Breakdown</string>
+    <string name="home_recent_transactions">Recent Transactions</string>
+    <string name="home_view_all">View All</string>
+    <string name="home_empty_transactions">No transactions recorded this month.</string>
+    <string name="home_empty_transactions_sub">Import SMS messages or wait for incoming bank alerts.</string>
+
+    <!-- Transactions Screen -->
+    <string name="transactions_title">Transactions</string>
+    <string name="search_hint">Search merchant, note, or ID…</string>
+    <string name="filter_all">All</string>
+    <string name="filter_debit">Spent</string>
+    <string name="filter_credit">Received</string>
+    <string name="filter_category">Category</string>
+    <string name="filter_month">Month</string>
+    <string name="transaction_detail">Transaction Details</string>
+    <string name="transaction_edit_category">Change Category</string>
+    <string name="transaction_remember_merchant">Remember for future transactions from this merchant</string>
+    <string name="transaction_delete">Delete Transaction</string>
+    <string name="transaction_delete_confirm">Are you sure you want to delete this transaction?</string>
+    <string name="transaction_deleted">Transaction deleted</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_save">Save</string>
+
+    <!-- Needs Review Screen -->
+    <string name="review_title">Needs Review</string>
+    <string name="review_subtitle">Unparsed or ambiguous financial messages</string>
+    <string name="review_empty">All caught up! No unparsed messages.</string>
+    <string name="review_btn_ignore">Ignore</string>
+    <string name="review_btn_convert">Create Transaction</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_theme_system">System Default</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_senders">Monitored SMS Senders</string>
+    <string name="settings_senders_subtitle">bKash, NAGAD, 16216, EBL, etc.</string>
+    <string name="settings_security">Security</string>
+    <string name="settings_biometric_lock">Biometric / Screen Lock</string>
+    <string name="settings_biometric_desc">Require biometric or device credential to open SpendSMS</string>
+    <string name="settings_data_management">Data &amp; Privacy</string>
+    <string name="settings_export_csv">Export Transactions (CSV)</string>
+    <string name="settings_import_sms">Re-import SMS History</string>
+    <string name="settings_delete_all">Delete All Data</string>
+    <string name="settings_delete_confirm">This will permanently delete all stored transactions and categories from this device. This cannot be undone.</string>
+    <string name="settings_about">About SpendSMS</string>
+    <string name="settings_about_desc">100% Offline, Privacy-first Expense Tracker for Bangladesh.</string>
+    <string name="version_label">Version %1$s</string>
+
+    <!-- Categories -->
+    <string name="cat_food">Food &amp; Dining</string>
+    <string name="cat_transport">Transport</string>
+    <string name="cat_bills">Bills &amp; Utilities</string>
+    <string name="cat_shopping">Shopping</string>
+    <string name="cat_recharge">Mobile Recharge</string>
+    <string name="cat_transfer">Transfer &amp; Cash Out</string>
+    <string name="cat_salary">Salary &amp; Income</string>
+    <string name="cat_other">Other</string>
+
+    <!-- Accessibility Descriptions -->
+    <string name="cd_nav_home">Navigate to Home</string>
+    <string name="cd_nav_transactions">Navigate to Transactions</string>
+    <string name="cd_nav_review">Navigate to Review</string>
+    <string name="cd_nav_settings">Navigate to Settings</string>
+    <string name="cd_category_chart">Monthly Spending Breakdown Chart</string>
+    <string name="cd_filter_button">Filter transactions</string>
+    <string name="cd_search_clear">Clear search query</string>
+    <string name="cd_back">Back</string>
+    <string name="cd_previous_month">Previous month</string>
+    <string name="cd_next_month">Next month</string>
+    <string name="date_today">Today</string>
+    <string name="date_yesterday">Yesterday</string>
+    <string name="current_month">Current Month</string>
+    <string name="review_banner_action">Review Now</string>
+    <string name="review_banner_title">%1$d SMS need review</string>
+    <string name="review_banner_desc">Some messages couldn’t be parsed automatically.</string>
+    <string name="no_spending_recorded">No spending recorded this month</string>
+    <string name="no_income_recorded">No incoming credits recorded this month</string>
+    <string name="no_transactions_found">No transactions match your filters</string>
+    <string name="no_transactions_found_sub">Try resetting filters or searching for something else.</string>
+    <string name="transaction_balance_after">Balance After</string>
+    <string name="transaction_ref_id">Reference ID</string>
+    <string name="transaction_raw_sms">Original SMS</string>
+    <string name="transaction_sender">Sender</string>
+    <string name="transaction_date_time">Date &amp; Time</string>
+    <string name="transaction_save_changes">Save Changes</string>
+    <string name="convert_dialog_title">Convert to Transaction</string>
+    <string name="convert_amount_label">Amount (৳)</string>
+    <string name="convert_merchant_label">Merchant / Payee</string>
+    <string name="convert_type_label">Type</string>
+    <string name="convert_category_label">Category</string>
+    <string name="convert_btn_create">Create Transaction</string>
+    <string name="unparsed_reason_label">Reason</string>
+    <string name="review_ignored_toast">Message ignored</string>
+    <string name="review_converted_toast">Transaction created successfully</string>
+    <string name="add_sender_title">Add Monitored Sender</string>
+    <string name="add_sender_hint">e.g. DhakaBank, 16216</string>
+    <string name="add_sender_desc">Enter the SMS header or shortcode of your financial service.</string>
+    <string name="add_sender_confirm">Add Sender</string>
+    <string name="sender_added_toast">Sender added to monitored list</string>
+    <string name="sender_removed_toast">Sender removed</string>
+    <string name="csv_exported_toast">Transactions exported successfully</string>
+    <string name="csv_export_failed_toast">CSV export failed</string>
+    <string name="reimport_scheduled_toast">SMS re-sync scheduled</string>
+    <string name="all_data_deleted_toast">All data cleared</string>
+    <string name="btn_add">Add</string>
+    <string name="monitored_senders_count">Monitored Senders (%1$d Active)</string>
+    <string name="biometric_not_available">Biometric or device security is not set up on this device.</string>
+    <string name="biometric_prompt_title">SpendSMS Locked</string>
+    <string name="biometric_prompt_subtitle">Touch the fingerprint sensor or enter your device PIN to unlock</string>
+    <string name="biometric_prompt_negative">Use Device PIN</string>
+    <string name="biometric_unlock_button">Unlock SpendSMS</string>
+    <string name="cd_edit_budget">Edit budget for %1$s</string>
+
+    <!-- Budgets & Notifications -->
+    <string name="nav_budgets">Budgets</string>
+    <string name="cd_nav_budgets">Navigate to Budgets</string>
+    <string name="budgets_title">Monthly Budgets</string>
+    <string name="budgets_subtitle">Control spending with custom category limits and smart notifications</string>
+    <string name="budgets_overall_title">Overall Monthly Limit</string>
+    <string name="budgets_overall_desc">All combined expense categories</string>
+    <string name="budgets_category_title">Category Limits</string>
+    <string name="budgets_no_budget_set">No limit set</string>
+    <string name="budgets_set_budget">Set Budget</string>
+    <string name="budgets_edit_budget">Edit Budget</string>
+    <string name="budgets_limit_amount">Monthly Limit (৳)</string>
+    <string name="budgets_limit_hint">e.g. 5000</string>
+    <string name="budgets_spent_of_limit">%1$s of %2$s</string>
+    <string name="budgets_remaining">%1$s remaining</string>
+    <string name="budgets_over_budget">%1$s over budget</string>
+    <string name="budgets_delete_confirm">Remove budget limit for %1$s?</string>
+    <string name="budgets_saved_toast">Budget saved successfully</string>
+    <string name="budgets_removed_toast">Budget removed</string>
+    <string name="budgets_invalid_amount">Please enter a valid amount greater than 0</string>
+    <string name="home_budget_card_title">Monthly Budget</string>
+    <string name="home_budget_card_view">View Budgets</string>
+    <string name="home_budget_warning_80">%1$s reached %2$d%% of limit</string>
+    <string name="home_budget_warning_100">%1$s reached %2$d%% of limit</string>
+    <string name="home_budget_not_set">No monthly budget set</string>
+    <string name="home_budget_set_prompt">Set monthly limits to keep your spending on track</string>
+    <string name="notif_channel_budgets_name">Budget Alerts</string>
+    <string name="notif_channel_budgets_desc">Notifications when approaching or exceeding category spending limits</string>
+    <string name="notif_budget_80_title">Budget Warning (80% reached)</string>
+    <string name="notif_budget_80_body">You have spent %1$s of your %2$s budget for %3$s.</string>
+    <string name="notif_budget_100_title">Budget Exceeded (100% reached)</string>
+    <string name="notif_budget_100_body">Alert: You have reached your %1$s budget for %2$s (%3$s spent).</string>
+    <string name="permission_notification_title">Enable Budget Notifications</string>
+    <string name="permission_notification_desc" formatted="false">Get immediate on-device warnings when spending reaches 80% and 100% of your budget.</string>
+    <string name="permission_notification_btn">Allow Notifications</string>
+
+    <!-- Recurring Payments & Reminders -->
+    <string name="nav_recurring">Subscriptions</string>
+    <string name="cd_nav_recurring">Navigate to Subscriptions and Bills</string>
+    <string name="recurring_title">Subscriptions &amp; Bills</string>
+    <string name="recurring_subtitle">Track recurring payments, Wi-Fi, utilities, and rent with due date reminders</string>
+    <string name="recurring_pending_section">Detected Bills (%1$d)</string>
+    <string name="recurring_pending_desc">SpendSMS detected recurring patterns from your SMS history. Choose to track or dismiss them.</string>
+    <string name="recurring_active_section">Active Subscriptions (%1$d)</string>
+    <string name="recurring_empty_title">No Subscriptions Tracked Yet</string>
+    <string name="recurring_empty_desc">Recurring bills like Wi-Fi, Netflix, utilities, or house rent will appear here automatically when detected from your SMS alerts.</string>
+    <string name="recurring_btn_confirm">Track</string>
+    <string name="recurring_btn_dismiss">Dismiss</string>
+    <string name="recurring_btn_add">Add Subscription</string>
+    <string name="recurring_dialog_add_title">Add Recurring Payment</string>
+    <string name="recurring_merchant_label">Merchant / Bill Name</string>
+    <string name="recurring_merchant_hint">e.g. Link3, Netflix, House Rent</string>
+    <string name="recurring_amount_label">Expected Amount (৳)</string>
+    <string name="recurring_category_label">Category</string>
+    <string name="recurring_frequency_label">Frequency</string>
+    <string name="recurring_freq_monthly">Monthly</string>
+    <string name="recurring_freq_weekly">Weekly</string>
+    <string name="recurring_freq_yearly">Yearly</string>
+    <string name="recurring_day_label">Expected Day of Month (1-31)</string>
+    <string name="recurring_due_in_days">Due in %1$d days</string>
+    <string name="recurring_due_today">Due today</string>
+    <string name="recurring_overdue">Overdue by %1$d days</string>
+    <string name="recurring_last_paid">Last paid: %1$s</string>
+    <string name="recurring_next_due">Next due: %1$s</string>
+    <string name="recurring_saved_toast">Recurring bill saved</string>
+    <string name="recurring_dismissed_toast">Suggestion dismissed</string>
+    <string name="recurring_deleted_toast">Recurring payment deleted</string>
+    <string name="recurring_delete_confirm">Remove recurring payment tracking for %1$s?</string>
+    <string name="notif_channel_recurring_name">Recurring Payment Reminders</string>
+    <string name="notif_channel_recurring_desc">Reminders for upcoming bills, subscriptions, and recurring payments</string>
+    <string name="notif_recurring_title">Upcoming Bill: %1$s</string>
+    <string name="notif_recurring_body">Your %1$s bill of %2$s is expected on %3$s.</string>
+    <string name="home_recurring_card_title">Upcoming Bills</string>
+    <string name="home_recurring_card_view">View All</string>
+    <string name="home_recurring_due_count">%1$d upcoming bills this week</string>
+
+    <!-- Merchant Category Rules -->
+    <string name="rules_title">Merchant Rules</string>
+    <string name="rules_subtitle">Manage auto-categorization rules learned from your edits or configured manually</string>
+    <string name="rules_empty_title">No Custom Rules Yet</string>
+    <string name="rules_empty_desc">Rules automatically appear here when you change a transaction\'s category and check \'Remember for merchant\'. You can also add rules manually below.</string>
+    <string name="rules_btn_add">Add Merchant Rule</string>
+    <string name="rules_dialog_add_title">New Merchant Rule</string>
+    <string name="rules_merchant_label">Merchant Name</string>
+    <string name="rules_merchant_hint">e.g. Daraz, KFC, Pathao Food</string>
+    <string name="rules_category_label">Assigned Category</string>
+    <string name="rules_saved_toast">Merchant rule saved &amp; applied to transactions</string>
+    <string name="rules_deleted_toast">Merchant rule deleted</string>
+    <string name="rules_delete_confirm">Delete categorization rule for %1$s? Future transactions will use default category.</string>
+    <string name="rules_search_hint">Search merchant rules…</string>
+    <string name="settings_category_rules">Merchant Rules</string>
+    <string name="settings_category_rules_desc">View and manage auto-categorization rules</string>
+</resources>

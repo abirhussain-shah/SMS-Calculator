@@ -1,0 +1,23 @@
+# Keystore & Signing secrets (NEVER commit these)
+keystore.properties
+*.jks
+*.keystore
+
+# Gradle & Build outputs
+.gradle/
+build/
+app/build/
+*.apk
+*.aab
+
+# Local SDK and configuration
+local.properties
+
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+.kotlin/
+
+# OS specific
+.DS_Store
+Thumbs.db
